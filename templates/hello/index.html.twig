@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello World</title>
+</head>
+<body>
+<h1>Hello World</h1>
+
+{% for pays, villes in villesParPays %}
+    <h2>{{ pays }}</h2>
+    <ul>
+        {% for ville in villes %}
+            <li>{{ ville }}</li>
+        {% endfor %}
+    </ul>
+{% endfor %}
+</body>
+</html>
