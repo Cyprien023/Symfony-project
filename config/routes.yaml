@@ -3,3 +3,8 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+
+
+content_list:
+    path: '/contenu/liste'
+    controller: 'App\Controller\ContenuController::liste'

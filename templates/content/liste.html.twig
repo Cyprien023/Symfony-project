@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des Contenus{% endblock %}
+
+{% block body %}
+    <h1>Liste des Contenus</h1>
+
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Contenu</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for contenu in contenus %}
+            <tr>
+                <td>{{ contenu.id }}</td>
+                <td>{{ contenu.contenu }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
