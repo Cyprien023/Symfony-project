@@ -25,3 +25,6 @@ class ContentController extends AbstractController
         return $this->render('content/liste.html.twig', ['contenus' => $contenus]);
     }
 }
+
+
+
