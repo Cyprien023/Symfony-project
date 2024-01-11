@@ -2,12 +2,10 @@
 
 namespace App\Entity;
 
-use App\Repository\ContentRepository;
-use Doctrine\ORM\Mapping as ORM;
-use Symfony\UX\Turbo\Attribute\Broadcast;
 
-#[ORM\Entity(repositoryClass: ContentRepository::class)]
-#[Broadcast]
+use Doctrine\ORM\Mapping as ORM;
+
+#[ORM\Entity]
 class Content
 {
     #[ORM\Id]

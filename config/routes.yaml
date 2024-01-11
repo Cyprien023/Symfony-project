@@ -7,4 +7,4 @@ controllers:
 
 content_list:
     path: '/contenu/liste'
-    controller: 'App\Controller\ContenuController::liste'
+    controller: 'App\Controller\ContentController::list'
