@@ -8,3 +8,8 @@ controllers:
 content_list:
     path: '/contenu/liste'
     controller: 'App\Controller\ContentController::list'
+
+content_show:
+    path: '/contenu/{id}'
+    controller: 'App\Controller\ContentController::show'
+

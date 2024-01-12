@@ -1,24 +1,16 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Liste des Contenus{% endblock %}
-
 {% block body %}
-    <h1>Liste des Contenus</h1>
-
-    <table>
-        <thead>
-        <tr>
-            <th>ID</th>
-            <th>Contenu</th>
-        </tr>
-        </thead>
-        <tbody>
+    <h2>Liste des Hotels de ville</h2>
+    <ul>
         {% for contenu in contenus %}
-            <tr>
-                <td>{{ contenu.id }}</td>
-                <td>{{ contenu.contenu }}</td>
-            </tr>
+            <li>
+                <a href="{{ path('content_show', {'id': contenu.id}) }}">{{ contenu.contenu }}</a>
+            </li>
         {% endfor %}
-        </tbody>
-    </table>
+    </ul>
+
+    <div class="pagination flex justify-center items-end">
+        {{ knp_pagination_render(contenus) }}
+    </div>
 {% endblock %}
