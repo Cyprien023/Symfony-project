@@ -13,3 +13,11 @@ content_show:
     path: '/contenu/{id}'
     controller: 'App\Controller\ContentController::show'
 
+app_login:
+    path: '/login'
+    controller: 'App\Controller\SecurityController::login'
+
+app_logout:
+    path: '/logout'
+    controller: 'App\Controller\SecurityController::logout'
+
