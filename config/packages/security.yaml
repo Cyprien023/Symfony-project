@@ -12,14 +12,18 @@ security:
         App\Entity\User:
             algorithm: auto
 
+
     providers:
         app_user_provider:
             entity:
                 class: App\Entity\User
-                property: pseudo
+                property: id
+        # used to reload user from session & other features (e.g. switch_user)
 
     firewalls:
         main:
+            lazy: true
+            provider: app_user_provider
             form_login:
                 login_path: app_login
                 check_path: app_login
@@ -28,6 +32,4 @@ security:
                 target: app_login
 
     access_control:
-        - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/register, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-        - { path: ^/admin, roles: ROLE_ADMIN }
+        - { path: ^/login, roles: PUBLIC_ACCESS }

@@ -1,7 +1,22 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    {% if contenu.id == 23 %}
+
+    {% if contenu.id == 21 %}
+        <h2>Autre contenu</h2>
+        <p>{{ contenu.contenu }}</p>
+        <div class="p-5">
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Aucun village pour HDV1, les villages commences HDV3 !</p>
+        </div>
+
+    {% elseif contenu.id == 22 %}
+        <h2>Autre contenu</h2>
+        <p>{{ contenu.contenu }}</p>
+        <div class="p-5">
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Aucun village pour HDV2, les villages commences HDV3 !</p>
+        </div>
+
+    {% elseif contenu.id == 23 %}
         <h2>Village et composition</h2>
         <p>{{ contenu.contenu }}</p>
         <div class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
@@ -17,6 +32,7 @@
                 <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Un village fermé, qui fait perdre du temps à l'adversaire.</p>
             </div>
         </div>
+
 
     {% elseif contenu.id == 24 %}
         <h2>Autre contenu</h2>

@@ -24,7 +24,8 @@ class SecurityController extends AbstractController
     #[Route('/logout', name: 'app_logout')]
     public function logout()
     {
-        // la route sera interceptée par Symfony avant d'atteindre cette méthode
-        throw new \Exception('This should never be reached!');
+        throw new \Exception('error');
     }
 }
+
+

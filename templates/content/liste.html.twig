@@ -5,7 +5,7 @@
     <ul>
         {% for contenu in contenus %}
             <li>
-                <a href="{{ path('content_show', {'id': contenu.id}) }}">{{ contenu.contenu }}</a>
+                <a href="{{ path('content_show', {'id': contenu.id}) }}"><p>Cliquer ici pour : </p>{{ contenu.contenu }}</a>
             </li>
         {% endfor %}
     </ul>

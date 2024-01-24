@@ -3,21 +3,3 @@ controllers:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
-
-
-content_list:
-    path: '/contenu/liste'
-    controller: 'App\Controller\ContentController::list'
-
-content_show:
-    path: '/contenu/{id}'
-    controller: 'App\Controller\ContentController::show'
-
-app_login:
-    path: '/login'
-    controller: 'App\Controller\SecurityController::login'
-
-app_logout:
-    path: '/logout'
-    controller: 'App\Controller\SecurityController::logout'
-
