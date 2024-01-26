@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Ajouter un contenu</h1>
+
+    {{ form_start(form) }}
+    {{ form_errors(form) }}
+
+    <div>
+        {{ form_label(form.content) }}
+        {{ form_widget(form.content) }}
+        {{ form_errors(form.content) }}
+    </div>
+
+    <button type="submit">Ajouter</button>
+    {{ form_end(form) }}
+{% endblock %}
